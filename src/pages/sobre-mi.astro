@@ -1,0 +1,138 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import miFoto from '../img/images.png'; // <-- Ruta corregida con el nombre real del archivo
+---
+
+
+
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Mí - Tesla Aero</title>
+</head>
+<body>
+  <Navbar />
+
+  <main class="about-container">
+    <section class="about-section">
+      <header>
+        <h1>Sobre Mí y el Proyecto Tesla Aero</h1>
+      </header>
+      
+      <div class="about-content">
+        <!-- Contenedor utilizando la propiedad .src de la imagen importada -->
+        <div class="avatar-container">
+          <img src={miFoto.src} alt="Avatar de desarrollador Carpincho" class="profile-image" />
+        </div>
+
+        <!-- Biografía requerida por la guía -->
+        <article class="bio-text">
+          <h2>Mi Perfil</h2>
+          <p>
+            Hola soy Elder un estudiante de desarrollo web apasionado por el diseño del mañana. Este sitio ha sido construido como parte de mi evaluacion práctica del framework Astro, uniendo el rendimiento técnico con la redacción profesional sobre innovaciones de vanguardia.
+          </p>
+          <p>
+            Elegí el auto volador de Tesla porque representa la convergencia perfecta entre la ingeniería de software automotriz, la inteligencia artificial autónoma y la aeronáutica avanzada. Mi objetivo con este proyecto es comunicar de forma clara y precisa cómo el transporte tridimensional transformará la vida urbana en las próximas décadas.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</body>
+</html>
+
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0d0f12;
+    color: #f7fafc;
+    line-height: 1.5;
+  }
+</style>
+
+<style>
+  .about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    min-height: 75vh;
+  }
+
+  .about-section h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+
+  .about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background-color: #11141a;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #1a202c;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .avatar-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #3182ce;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .bio-text {
+    flex: 2;
+  }
+
+  .bio-text h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3182ce;
+    padding-bottom: 5px;
+    display: inline-block;
+  }
+
+  .bio-text p {
+    color: #cbd5e0;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 25px;
+    }
+    
+    .bio-text p {
+      text-align: center;
+    }
+  }
+</style>

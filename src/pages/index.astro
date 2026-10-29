@@ -1,16 +1,53 @@
 ---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Banner from '../components/Banner.astro';
 ---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tesla Aero - El Futuro de la Movilidad</title>
+  </head>
+  <body>
+    <Navbar />
+    
+    <main>
+      <Banner 
+        title="Bienvenidos a la Era del Transporte Vertical" 
+        subtitle="Explora el revolucionario proyecto de auto volador desarrollado por Tesla." 
+      />
+      
+      <section class="intro-content">
+        <h1>El Futuro de la Movilidad Urbana</h1>
+        <p>
+          El ecosistema de transporte está a punto de cambiar para siempre. El auto volador de Tesla 
+          combina tecnología de propulsión eléctrica avanzada con sistemas de despegue y aterrizaje 
+          vertical (VTOL). Este sitio web ha sido diseñado para recopilar los últimos avances tecnológicos, 
+          análisis de ingeniería y proyecciones de mercado sobre el vehículo que promete eliminar los 
+          atascos de tráfico en las grandes metrópolis del mundo.
+        </p>
+      </section>
+    </main>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <Footer />
+  </body>
 </html>
+
+<style>
+  .intro-content {
+    background-color: #11141a;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+  }
+  h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.1rem;
+    color: #9ca3af;
+  }
+</style>

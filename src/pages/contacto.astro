@@ -1,0 +1,169 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Tesla Aero</title>
+</head>
+<body>
+  <Navbar />
+
+  <main class="contact-container">
+    <section class="contact-box">
+      <header class="contact-header">
+        <h1>Contacto</h1>
+        <p>¿Tienes dudas sobre los sistemas de propulsión o reservas del auto volador de Tesla? Déjanos tu mensaje o contáctame directamente.</p>
+      </header>
+
+      <!-- Información personal requerida adaptada de forma profesional -->
+      <div class="personal-info">
+        <h3>Información del Desarrollador</h3>
+        <p><strong>Correo electrónico:</strong> <a href="mailto:a_eldencruzado@colegiosanlorenzo.org">a_eldencruzado@colegiosanlorenzo.org</a></p>
+        <p><strong>Teléfono de contacto:</strong> <a href="tel:+56989136461">+569 8913 6461</a></p>
+      </div>
+
+      <!-- Formulario requerido por el Wireframe 4 -->
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito!');">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre completo" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Escribe tu consulta aquí..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <Footer />
+</body>
+</html>
+
+<!-- Estilos específicos locales (Scoped) exigidos por la rúbrica -->
+<style>
+  .contact-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-box {
+    background-color: #11141a;
+    border: 1px solid #1a202c;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contact-header h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  .contact-header p {
+    color: #a0aec0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .personal-info {
+    background-color: #1a202c;
+    border-left: 4px solid #3182ce;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  .personal-info h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+
+  .personal-info p {
+    color: #cbd5e0;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+  }
+
+  .personal-info a {
+    color: #63b3ed;
+    text-decoration: none;
+  }
+
+  .personal-info a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-group label {
+    color: #cbd5e0;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background-color: #1a202c;
+    border: 1px solid #2d3748;
+    border-radius: 6px;
+    padding: 12px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #3182ce;
+  }
+
+  .submit-btn {
+    background-color: #3182ce;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+  }
+
+  .submit-btn:hover {
+    background-color: #2b6cb0;
+  }
+</style>

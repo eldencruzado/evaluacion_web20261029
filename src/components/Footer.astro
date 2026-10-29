@@ -1,0 +1,31 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="footer">
+  <p>&copy; {currentYear} Desarrollo Web Astro - Proyecto Tesla Volador.</p>
+  <div class="socials">
+    <a href="#">X (Twitter)</a>
+    <a href="#">YouTube</a>
+    <a href="#">GitHub</a>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #11141a;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #1f2937;
+    font-size: 0.9rem;
+    color: #9ca3af;
+  }
+  .socials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .socials a:hover {
+    color: #ffffff;
+  }
+</style>

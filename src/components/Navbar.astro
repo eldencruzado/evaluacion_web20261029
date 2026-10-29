@@ -1,0 +1,42 @@
+---
+---
+<nav class="navbar">
+  <div class="logo">Tesla <span class="highlight">Aero</span></div>
+  <ul class="nav-links">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/sobre-mi">Sobre Mí</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #11141a;
+    padding: 20px 40px;
+    border-bottom: 1px solid #1f2937;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .highlight {
+    color: #cc0000;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  .nav-links a {
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover {
+    color: #cc0000;
+  }
+</style>

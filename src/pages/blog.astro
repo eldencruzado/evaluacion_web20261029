@@ -1,0 +1,144 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Banner from '../components/Banner.astro'; // Tu componente adicional
+---
+
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Blog - Tesla Aero</title>
+</head>
+<body>
+  <Navbar />
+
+  <main>
+    <header class="blog-header">
+      <h1>Crónicas de la Movilidad Vertical</h1>
+      <p>Explora los últimos artículos, análisis técnicos y novedades sobre el desarrollo del automóvil volador de Tesla.</p>
+    </header>
+
+    <!-- Contenedor principal de los posts en formato grilla -->
+    <section class="posts-grid">
+      
+      <!-- Post 1 usando HTML Semántico -->
+      <article class="post-card">
+        <header>
+          <h2>Sistemas de Propulsión Eléctrica y Despegue Vertical</h2>
+          <span class="date">Publicado: 12 de Octubre, 2026</span>
+        </header>
+        <p>
+          El núcleo del nuevo vehículo de Tesla radica en sus motores de inducción magnética de alta densidad. A diferencia de los helicópteros tradicionales, este modelo emplea rotores encapsulados independientes que mitigan el ruido ambiental en zonas urbanas. La transición fluida entre el despegue vertical y el vuelo horizontal representa el mayor hito de ingeniería aeronáutica de la década.
+        </p>
+        <footer>
+          <a href="#" class="read-more">Leer artículo completo</a>
+        </footer>
+      </article>
+
+      <!-- Post 2 usando HTML Semántico -->
+      <article class="post-card">
+        <header>
+          <h2>Regulación Espacial Urbana: ¿Cuándo Comenzarán los Vuelos?</h2>
+          <span class="date">Publicado: 26 de Octubre, 2026</span>
+        </header>
+        <p>
+          La Administración Federal de Aviación y los ministerios de transportes globales avanzan en la creación de autopistas tridimensionales virtuales. Tesla ya implementa en su software un sistema de navegación autónoma basado en redes neuronales, el cual impedirá colisiones mediante un canal de comunicación directo entre vehículos. Las primeras rutas comerciales se proyectan para el próximo año.
+        </p>
+        <footer>
+          <a href="#" class="read-more">Leer artículo completo</a>
+        </footer>
+      </article>
+
+    </section>
+
+    <!-- Componente Adicional requerido en esta página por la guía (Wireframe 3) -->
+    <section class="cta-section">
+      <Banner 
+        title="Mantente Informado" 
+        subtitle="Suscríbete a nuestro boletín para recibir alertas exclusivas sobre las próximas pruebas de vuelo de Tesla." 
+      />
+    </section>
+  </main>
+
+  <Footer />
+</body>
+</html>
+
+<!-- Estilos específicos (Scoped) requeridos por la rúbrica -->
+<style>
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .blog-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .blog-header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  .blog-header p {
+    color: #a0aec0;
+    font-size: 1.1rem;
+  }
+
+  /* Grilla para cumplir con el requisito de diseño */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .post-card {
+    background-color: #11141a;
+    border: 1px solid #1a202c;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .post-card h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .post-card .date {
+    font-size: 0.85rem;
+    color: #718096;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .post-card p {
+    color: #cbd5e0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .read-more {
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
+  }
+
+  .cta-section {
+    margin-top: 40px;
+  }
+</style>
